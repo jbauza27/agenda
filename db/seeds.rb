@@ -27,6 +27,23 @@ Provincia.create(nombre: "Jujuy", pais_id: 1)
 Provincia.create(nombre: "Santa Cruz", pais_id: 1)
 Provincia.create(nombre: "La Rioja", pais_id: 1)
 
+Pais.create(nombre: "Chile")
+Provincia.create(nombre: "Aisén del General Carlos Ibáñez del Campo", pais_id: 2)
+Provincia.create(nombre: "Antofagasta", pais_id: 2)
+Provincia.create(nombre: "Arica y Parinacota", pais_id: 2)
+Provincia.create(nombre: "Araucanía", pais_id: 2)
+Provincia.create(nombre: "Atacama", pais_id: 2)
+Provincia.create(nombre: "Bío-Bío", pais_id: 2)
+Provincia.create(nombre: "Coquimbo", pais_id: 2)
+Provincia.create(nombre: "Libertador General Bernardo O'Higgins", pais_id: 2)
+Provincia.create(nombre: "Los Lagos", pais_id: 2)
+Provincia.create(nombre: "Los Ríos", pais_id: 2)
+Provincia.create(nombre: "Magallanes y Antártica Chilena", pais_id: 2)
+Provincia.create(nombre: "Maule", pais_id: 2)
+Provincia.create(nombre: "Región Metropolitana de Santiago", pais_id: 2)
+Provincia.create(nombre: "Tarapacá", pais_id: 2)
+Provincia.create(nombre: "Valparaíso", pais_id: 2)
+
 # Creación de tipos de teléfono
 TipoDeTelefono.delete_all
 TipoDeTelefono.create(nombre: 'Fijo')
@@ -52,3 +69,12 @@ Persona.create(nombre: 'Luisa',
   sitio_web: 'http://www.lcontreras.com',
   provincia_id: 8,
   pais_id: 1)
+Persona.create(nombre: 'Jorge',
+  apellido: 'Pietro',
+  sexo: 'Masculino',
+  fecha_de_nacimiento: '1978-03-11 00:00:00',
+  direccion: 'Washington 1725, Topahue',
+  email: 'jpietro@yahoo.com',
+  sitio_web: 'http://www.jpietro.com',
+  provincia_id: 10,
+  pais_id: 2)
