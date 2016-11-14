@@ -1,0 +1,45 @@
+<div class="container-fluid">  
+  <% if notice %>
+    <div class="row margen-inferior-chico">
+      <div class="col-sm-12">
+        <p id="notice"><%= notice %></p>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="row margen-inferior-medio">
+    <div class="col-sm-12">
+      <table class="table table-condensed">
+        <thead>
+          <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Sexo</th>
+            <th>Fecha de nacimiento</th>
+            <th>Teléfonos</th>
+            <th>Dirección</th>
+            <th>Email</th>
+            <th>Sitio web</th>
+            <th colspan="2" class="texto-centrado">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpo-tabla">
+          <% @personas.each do |persona| %>
+            <tr>
+              <td><%= persona.apellido %></td>
+              <td><%= persona.nombre %></td>
+              <td><%= persona.sexo %></td>
+              <td><%= persona.fecha_de_nacimiento %></td>
+              <td><a href="#">Ver</a></td>
+              <td><%= persona.direccion %></td>
+              <td><%= persona.email %></td>
+              <td><%= persona.sitio_web %></td>
+              <td><a href="#">Editar</a></td>
+              <td><a href="#">Eliminar</a></td>
+            </tr>
+          <% end %>          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
