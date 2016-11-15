@@ -37,7 +37,9 @@
         <div class="form-group">
           <%= f.label :fecha_de_nacimiento, "Fecha de nacimiento: ", :class => 'control-label col-sm-2' %>        
           <div class="col-sm-8">
-            <%= f.text_field :fecha_de_nacimiento, { :class => 'form-control ancho_25', :pattern => '[0-9][0-9]/[0-9][0-9]/[0-9][0-9][0-9][0-9]', :placeholder => 'dd/mm/aaaa' } %>
+            <%= select_tag('dia_nac', options_for_select([ ['Día...', 0] ]), { :class => 'form-control ancho_10', :id => 'select_dia_nac' } ) %>
+            <%= select_tag('mes_nac', options_for_select(@meses, 0), { :class => 'form-control ancho_15', :id => 'select_mes_nac' } ) %>
+            <%= select_tag('anio_nac', options_for_select(@anios, 0), { :class => 'form-control ancho_10', :id => 'select_anio_nac' } ) %>
           </div>
         </div>                        
         <div class="form-group">
