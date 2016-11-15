@@ -13,10 +13,14 @@ class PersonaController < ApplicationController
   def create
     respond_to do |format|
       if @persona.save
-        format.html { redirect_to :controller => 'persona', :action => 'new', new_propiedad_url, notice: 'La persona ha sido guardada con éxito.' }            
+        format.html { redirect_to :controller => 'persona', :action => 'new', notice: 'La persona ha sido guardada con éxito.' }            
       else 
         format.html { render :new }            
       end  
     end    
+  end
+
+  def seleccion_pais
+    @provincias = Provincia.where('pais_id = ?', params[:id_pais]).order(nombre: :asc)        
   end
 end

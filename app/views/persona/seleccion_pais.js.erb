@@ -1,0 +1,10 @@
+$('#select_provincias').empty()
+                       .append('<option value="0">Seleccione una provincia...</option>');
+var id;
+var nombre;
+
+<% @provincias.each do |provincia| %>
+  id = <%= provincia.id %>;
+  nombre = '<%= provincia.nombre %>';
+  $('#select_provincias').append('<option value=' + id + '>' + nombre + '</option>');
+<% end %>

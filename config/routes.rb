@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'inicio/index'  
   
   # persona
+  get 'persona/seleccion_pais'
   get 'persona/index'
   get 'persona/new'
   post 'persona/create'
