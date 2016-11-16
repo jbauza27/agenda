@@ -31,7 +31,7 @@
         <div class="form-group">
           <%= f.label :sexo, "Sexo: ", :class => 'control-label col-sm-2' %>        
           <div class="col-sm-8">
-            <%= select_tag(:sexo, options_for_select([ ['Seleccione un sexo...', 0], ['Masculino', 1], ['Femenino', 2] ]), { :class => 'form-control ancho_25', :id => 'select_sexo' } ) %>            
+            <%= select_tag(:sexo, options_for_select([ ['Masculino', 1], ['Femenino', 2] ]), { :class => 'form-control ancho_25', :id => 'select_sexo' } ) %>            
           </div>
         </div>
         <div class="form-group">
@@ -63,13 +63,13 @@
         <div class="form-group">
           <%= f.label :pais_id, "País: ", :class => 'control-label col-sm-2' %>        
           <div class="col-sm-8">
-            <%= select_tag 'paises', content_tag(:option, 'Seleccione un país...', :value => "") + options_from_collection_for_select(@paises, :id, :nombre ), { :class => 'form-control ancho_25', :id => 'select_paises' } %>            
+            <%= select_tag 'paises', content_tag(:option, 'Seleccione un país...', :value => 0) + options_from_collection_for_select(@paises, :id, :nombre ), { :class => 'form-control ancho_25', :id => 'select_paises' } %>            
           </div>
         </div>        
         <div class="form-group">
           <%= f.label :provincia_id, "Provincia: ", :class => 'control-label col-sm-2' %>        
           <div class="col-sm-8">
-            <%= select_tag('provincias', options_for_select([ ['Seleccione una provincia...'] ]) , { :class => 'form-control ancho_25', :id => 'select_provincias' } ) %>
+            <%= select_tag('provincias', options_for_select([ ['Seleccione una provincia...', 0] ]) , { :class => 'form-control ancho_25', :id => 'select_provincias' } ) %>
           </div>
         </div>    
 
