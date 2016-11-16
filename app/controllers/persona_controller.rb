@@ -44,9 +44,13 @@ class PersonaController < ApplicationController
     respond_to do |format|
       if @persona.save
         Persona.where('id = ?', @persona.id).update_all(fecha_de_nacimiento: fecha_nac) if fecha_nac != nil
-        format.html { redirect_to :controller => 'persona', :action => 'index', notice: 'La persona ha sido guardada con éxito.' }            
+        format.html {
+          redirect_to({:controller => 'persona', :action => 'index'}, notice: 'La persona ha sido guardada con éxito.')
+        }            
       else 
-        format.html { redirect_to :controller => 'persona', :action => 'index', notice: 'No se ha podido guardar la persona.' }            
+        format.html {
+          redirect_to({:controller => 'persona', :action => 'index'}, notice: 'No se ha podido guardar la persona.') 
+        }            
       end  
     end        
   end
